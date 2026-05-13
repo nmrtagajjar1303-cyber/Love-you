@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For My Kashu ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&family=Noto+Serif+Devanagari:wght@400;700&display=swap');
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: 'Poppins', sans-serif; background: #fff0f3; }
+        .bg-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%); }
+        .page { display: none; height: 100vh; width: 100vw; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 25px; position: absolute; }
+        .active { display: flex; animation: fadeIn 0.8s ease-in; }
+        h1 { font-family: 'Dancing Script', cursive; color: #c9184a; font-size: 1.9rem; margin-bottom: 15px; }
+        .hindi-text { font-family: 'Noto Serif Devanagari', serif; font-size: 1.15rem; color: #590d22; line-height: 1.7; white-space: pre-line; margin: 10px 0; font-weight: 500; }
+        .feeling-item { opacity: 0; font-size: 1.05rem; color: #800f2f; margin: 8px 0; animation: slideUp 0.8s forwards; }
+        .next-btn { position: fixed; bottom: 30px; right: 25px; background: #ff4d6d; color: white; border: none; padding: 10px 25px; border-radius: 50px; font-size: 1rem; cursor: pointer; z-index: 100; font-weight: 600; }
+        .btns-container { margin-top: 30px; width: 100%; height: 100px; display: flex; justify-content: center; align-items: center; gap: 20px; }
+        .final-btn { padding: 12px 35px; font-size: 1.1rem; border: none; border-radius: 50px; font-weight: 600; }
+        #yesBtn { background: #38b000; color: white; }
+        #noBtn { background: #d00000; color: white; position: relative; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .heart { position: absolute; color: rgba(255, 77, 109, 0.5); font-size: 20px; animation: float 4s infinite linear; z-index: -1; }
+        @keyframes float { 0% { transform: translateY(105vh); } 100% { transform: translateY(-10vh); opacity: 0; } }
+    </style>
+</head>
+<body>
+
+    <div class="bg-container" id="heartContainer"></div>
+    
+    <!-- NAYA WORKING INSTRUMENTAL LINK -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2022/05/27/audio_1808f3030e.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="page active" id="p1">
+        <h1>My dearest sweetheart<br>(KASHU 🤭❤️)</h1>
+        <p>I want to tell you something which is very special...</p>
+        <button class="next-btn" onclick="startSurprise()">Next ⮕</button>
+    </div>
+
+    <!-- Shayari Pages -->
+    <div class="page" id="p2">
+        <div class="hindi-text feeling-item" style="animation-delay: 0.5s;">सात महीने पहले शुरू हुआ था,<br>जान-पहचान का यह सिलसिला,<br>पाँच महीनों से साथ तुम्हारा,<br>जैसे कोई अनमोल तोहफा मिला।</div>
+        <div class="hindi-text feeling-item" style="animation-delay: 3s;">अनजान राहों से चलकर हम,<br>आज इस मोड़ पर आए हैं,<br>सगाई के इन हसीं लम्हों में,<br>हम एक-दूजे में समाए हैं।</div>
+        <button class="next-btn" onclick="nextPage(3)">Continue ⮕</button>
+    </div>
+
+    <div class="page" id="p3">
+        <div class="hindi-text feeling-item" style="animation-delay: 0.5s;">तुम्हारी फिक्र और वो बेपनाह चाहत,<br>मुझे तुम्हारा बनाती है,<br>तुम्हारी सादगी ही मेरे दिल में,<br>बेहिसाब प्यार जगाती है।</div>
+        <div class="hindi-text feeling-item" style="animation-delay: 3s;">जिस तरह तुम संभालते हो मुझे,<br>हर छोटी-बड़ी बात में,<br>मैं खुद को सुरक्षित पाती हूँ,<br>बस तुम्हारे ही साथ में।</div>
+        <button class="next-btn" onclick="nextPage(4)">Continue ⮕</button>
+    </div>
+
+    <div class="page" id="p4">
+        <div class="hindi-text feeling-item" style="animation-delay: 0.5s;">ऐसा नहीं कि मोहब्बत मुझे,<br>बस एक ही बार हुई है,<br>तुम्हारे साथ हर नई सुबह,<br>मेरी रूह को छुई है।</div>
+        <div class="hindi-text feeling-item" style="animation-delay: 3s;">मैं हर दिन, हर पल,<br>फिर से तुम्हारे प्यार में गिरती हूँ,<br>सच तो ये है प्रिय,<br>मैं तुम पर अपनी दुनिया वारती हूँ।</div>
+        <button class="next-btn" onclick="nextPage(5)">Next ⮕</button>
+    </div>
+
+    <div class="page" id="p5">
+        <div class="feeling-item" style="animation-delay: 0.5s;">I just can't imagine my life without you 🌏</div>
+        <div class="feeling-item" style="animation-delay: 2s;">You make me feel so special with your loving efforts ✨</div>
+        <div class="feeling-item" style="animation-delay: 4s;">You played every role like friend, father, partner...</div>
+        <button class="next-btn" onclick="nextPage(6)">Next ⮕</button>
+    </div>
+
+    <div class="page" id="p6">
+        <h1>According to all these things...</h1>
+        <p>I wanted to tell you that <br><strong>I LOVE YOU ❤️</strong><br>and also wanted to ask you something...</p>
+        <button class="next-btn" onclick="nextPage(7)">Next ⮕</button>
+    </div>
+
+    <div class="page" id="p7">
+        <h1>WILL YOU BE MY FOREVER? ❤️</h1>
+        <div class="btns-container">
+            <button class="final-btn" id="yesBtn" onclick="nextPage(9)">YES</button>
+            <button class="final-btn" id="noBtn" onclick="wrongOption()">NO</button>
+        </div>
+    </div>
+
+    <div class="page" id="p8">
+        <h1>Oops! You clicked the wrong option 🤭</h1>
+        <p>Try again, my love!</p>
+        <button class="next-btn" onclick="nextPage(7)">Continue ⮕</button>
+    </div>
+
+    <div class="page" id="p9">
+        <h1>I KNEW IT THAT YOU WILL say YES 🫶🏻</h1>
+        <p style="font-size: 1.3rem; color: #c9184a; font-weight: bold;">I LOVE YOU❤️<br>I LOVE YOU SOO MUCHH❣️</p>
+    </div>
+
+    <script>
+        let noClickCount = 0;
+        const music = document.getElementById('bgMusic');
+
+        function startSurprise() {
+            music.play().then(() => {
+                console.log("Music Playing");
+            }).catch(e => {
+                console.log("Music blocked by browser");
+            });
+            nextPage(2);
+        }
+
+        function nextPage(num) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('p' + num).classList.add('active');
+        }
+
+        function wrongOption() {
+            noClickCount++;
+            if (noClickCount === 1) {
+                nextPage(8);
+            } else {
+                const btn = document.getElementById('noBtn');
+                const x = Math.random() * (window.innerWidth - 120);
+                const y = Math.random() * (window.innerHeight - 150);
+                btn.style.position = 'fixed';
+                btn.style.left = x + 'px';
+                btn.style.top = y + 'px';
+            }
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            document.getElementById('heartContainer').appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
